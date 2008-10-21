@@ -1,0 +1,65 @@
+                      Aardvark I2C/SPI Software
+                      -------------------------
+
+Introduction
+------------
+This document outlines the changes required to upgrade existing
+software that is dependent on previous versions of the API.  Only
+the changes between versions are given in the sections below.  New
+features are addressed in the datasheet.
+
+Please ensure that all older copies of the Aardvark library
+(aardvark.dll or aardvark.so) are removed from your operating system
+path before running your upgraded application.  This will help
+prevent the wrong library from being loaded with your application,
+thereby causing a version mismatch.
+
+
+Upgrade from v3.30 to v4.00
+---------------------------
+- Changes to naming convention of certain types.  For example,
+  AA_STATUS is now AardvarkStatus.
+
+- Older Numeric type definitions with the "aa_" prefix are now
+  deprecated.  For example, "u16" should be used in lieu of
+  "aa_u16".
+
+
+Upgrade from v2.50 to v3.00
+---------------------------
+- Changes to the parameter order of the following functions:
+
+     int aa_find_devices (
+         int      nmemb,
+         aa_u16 * array
+     );
+
+     int aa_i2c_read (
+         Aardvark     aardvark,
+         aa_u16       slave_addr,
+         AA_I2C_FLAGS flags,
+         aa_u16       num_bytes,
+         aa_u08 *     data_in
+     );
+
+     int aa_i2c_write (
+         Aardvark       aardvark,
+         aa_u16         slave_addr,
+         AA_I2C_FLAGS   flags,
+         aa_u16         num_bytes,
+         const aa_u08 * data_out
+     );
+
+- Structure AA_VERSION has been changed to AardvarkVersion
+
+- aa_log() takes a file descriptor instead of a FILE * stream
+
+- Direct USB driver on both Windows and Linux eliminates any
+  association with virtual USB serial ports
+
+- Visual Basic, Python, Labview no longer require a separate DLL
+
+
+Upgrade from v2.00 to v2.50
+---------------------------
+- No user-visible changes to the API

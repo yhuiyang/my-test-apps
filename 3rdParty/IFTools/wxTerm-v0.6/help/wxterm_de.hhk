@@ -1,0 +1,24 @@
+<html>
+<head>
+<!-- Sitemap 1.0 -->
+</head>
+<body>
+<object type="text/site properties">
+<param name="ImageType" value="Folder">
+</object>
+<ul>
+ <li><object type="text/sitemap">
+     <param name="Name" value="Device Clear">
+	<param name="Local" value="faq_de.html#Device Clear">
+	</object>
+ <li><object type="text/sitemap">
+	<param name="Name" value="Linux Version">
+	<param name="Local" value="faq_de.html#Linux Version">
+	</object>
+ <li><object type="text/sitemap">
+	<param name="Name" value="SCPI">
+	<param name="Local" value="intro_de.html#SCPI">
+	</object>
+</ul>
+</body>
+</html>

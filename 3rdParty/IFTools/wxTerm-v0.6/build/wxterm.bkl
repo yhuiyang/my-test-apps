@@ -1,0 +1,150 @@
+<?xml version="1.0" ?>
+
+<makefile>
+
+  <include file="presets/wx.bkl"/>
+  <include file="presets/simple.bkl"/>
+
+  <!-- the actual wxterm version -->
+  <set var="VERSION">0.6</set>
+
+  <!-- the output of the compiler/linker will be put in a release  -->
+  <!-- or debug folder!                                            -->
+  <set var="OUTPUT">
+    <if cond="DEBUG=='1'">debug</if>
+    <if cond="DEBUG=='0'">release</if>
+  </set>
+  <set var="BUILDDIR">$(OUTPUT)</set>
+
+  <!-- default is NO GPIB support, you can change this by -->
+  <!-- calling make with the Option GPIB=1                -->
+  <option name="GPIB">
+    <default-value>0</default-value>
+  </option>
+
+  <set var="LIBFLAG">
+    <if cond="DEBUG=='1'">d</if>
+  </set>
+
+  <!-- UNIX NOTES: If you are using wxpresets on Unix, and you are -->
+  <!-- linking against third-party wx components, or if you are    -->
+  <!-- using multi-lib builds and link against non-core libs (e.g. -->
+  <!-- media, gl, adv), you currently need to take special steps   -->
+  <!-- on Unix. (see bakefile_quickstart.txt in the wxpresets dir) -->
+  <set var="BEFORE_WX_LIBS">
+    <if cond="DEBUG=='1' and PLATFORM_UNIX=='1'">
+	 `$(DOLLAR)(WX_CONFIG) --libs html,core,base,adv,net  --debug=yes`
+    </if>
+    <if cond="DEBUG=='0' and PLATFORM_UNIX=='1'">
+	 `$(DOLLAR)(WX_CONFIG) --libs html,core,base,adv,net  --debug=no`
+    </if>
+  </set>
+  <set var="WX_LIBS">
+    <if cond="DEBUG=='1' and PLATFORM_UNIX=='1'"></if>
+  </set>
+
+  <set var="SOURCES">
+    ../src/about.cpp
+    ../src/color_wdr.cpp
+    ../src/config.cpp
+    ../src/connection_wdr.cpp
+    ../src/console.cpp
+    ../src/dataview.cpp
+    ../src/dbgprint.cpp
+    ../src/dump.cpp
+    ../src/logging_wdr.cpp
+    ../src/main.cpp
+    ../src/menu.cpp
+    ../src/modbase.cpp
+    ../src/modserial.cpp
+    ../src/portsel.cpp
+    ../src/prefs.cpp
+    ../src/statbar.cpp
+    ../src/toolbar.cpp
+  </set>
+
+  <set var="GPIBFLAG">
+    <if cond="GPIB=='1'">_gpib</if>
+  </set>
+
+  <set var="GPIBSRC">
+    <if cond="GPIB=='1'">
+	 ../src/gpib_wdr.cpp
+	 ../src/modgpib.cpp
+    </if>
+  </set>
+
+
+  <define-tag name="run-tarball" rules="action">
+    <command>
+	 (cd ..; tar -cvzf $(value) \
+	 --exclude=wxterm \
+	 --exclude=wxterm.exe \
+	 --exclude=*.a \
+	 --exclude=*.d \
+	 --exclude=debug \
+	 --exclude=*.dll \
+	 --exclude=docs \
+	 --exclude=*.ilk \
+	 --exclude=*$(VERSION)* \
+	 --exclude=*.log \
+	 --exclude=*.o* \
+	 --exclude=*.pdb \
+	 --exclude=*.pyc \
+	 --exclude=release \
+	 --exclude=*.so \
+	 --exclude=SVN* \
+	 --exclude=.svn \
+	 --exclude=wxterm_*.zip \
+	 --exclude=*~ \
+	 --exclude=*.___\
+	 --exclude=*.o* *)
+    </command>
+  </define-tag>
+
+  <if cond="PLATFORM_UNIX=='1'">
+    <action id="tarball">
+	 <run-tarball>wxterm-$(VERSION).tar.gz</run-tarball>
+    </action>
+  </if>
+
+  <exe id="wxterm" template="wx" template_append="simple">
+    <app-type>gui</app-type>
+    <define>GPIB=$(GPIB)</define>
+    <include>../src</include>
+    <sources>
+	 $(SOURCES)
+	 $(GPIBSRC)
+    </sources>
+    <runtime-libs>static</runtime-libs>
+    <threading>multi</threading>
+    <include>../include</include>
+    <sys-lib>wxawx$(LIBFLAG)-0.4</sys-lib>
+    <sys-lib>wxctb$(LIBFLAG)$(GPIBFLAG)-0.13</sys-lib>
+    <!-- the normal way to linking against third party wx          -->
+    <!-- components. Unfortunately this doesn't work right with    -->
+    <!-- Linux makefiles created by bakefile (see note above).     -->
+    <if cond="PLATFORM_WIN32=='1'">
+	 <wx-lib>adv</wx-lib>
+	 <wx-lib>base</wx-lib>
+	 <wx-lib>net</wx-lib>
+	 <wx-lib>core</wx-lib>
+	 <wx-lib>html</wx-lib>
+	 <lib-path>../lib</lib-path>
+	 <sys-lib cond="PLATFORM_WIN32=='1'">gpib32</sys-lib>
+    </if>
+    <win32-res>../src/wxterm.rc</win32-res>
+  </exe>
+
+</makefile>
+
+<!-- IMPORTANT HINTS -->
+<!-- To build the wxterm programm for WINDOWS:                     -->
+<!-- nmake -a -f makefile.vc DEBUG=1 WX_DEBUG=1 (debug version)    -->
+<!-- nmake -a -f makefile.vc DEBUG=0 WX_DEBUG=0 (release)          -->
+<!-- Otherwise type: WX_DEBUG=0 for a release!                     -->
+<!-- and for LINUX (debug):                                        -->
+<!-- make WX_DEBUG=1 DEBUG=1                                       -->
+<!-- LINUX (release):                                              -->
+<!-- make WX_DEBUG=0 DEBUG=0                                       -->
+

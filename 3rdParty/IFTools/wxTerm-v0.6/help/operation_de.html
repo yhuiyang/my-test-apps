@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<title>Bedienung</title>
+</head>
+<body>
+
+<h1>Programm Bedienung</h1>
+
+<h2><a name="general">Allgemein</a></h2>
+Ein- und Ausgabe werden in wxTerm in jeweils getrennten Bereichen
+vorgenommen. Dies hat den Vorteil, daß Eingaben nicht von laufenden
+Ausgaben des verbundenen Gerätes 'zugemüllt' werden und jederzeit
+sichtbar ist, was zum Gerät gesendet und was vom Gerät geantwortet
+wurde.<br>
+Außerdem enthält das Programmfenster von wxTerm einen Abschnitt zur
+Visualisierung des aktuellen Schnittstellenstatus.<br>
+wxTerm ist damit in drei Abschnitte unterteilt:
+
+<h3><a name="output">Das Ausgabefenster</a></h3>
+Hier werden alle empfangenen Datenbytes ausgegeben. Die Darstellung
+kann dabei wahlweise als normaler Text oder in hexadezimaler Ansicht
+erfolgen. Letzteres ist vor allem sinnvoll, wenn die Ausgaben nicht
+druckbare Zeichen enthalten oder Steuerzeichen sichtbar gemacht werden
+sollen.<br>
+Öffnen Sie dazu den Einstelldialog und wählen dort den Punkt
+<b>Farben</b> aus. Siehe auch <a
+href="#settings">Programmeinstellungen</a>.<br>
+Sie können zwischen diesen beiden Ansichten hin- und herschalten,
+indem Sie auf den entsprechenden Knopf in der <a
+href="#toolbar">Werkzeugleiste</a> klicken oder die zugehörige
+Tastenkombination drücken.<br>
+
+<h3><a name="input">Das Eingabefenster</a></h3>
+Geben Sie hier die Zeichen oder Kommandos ein, die an das verbundene
+Gerät gesendet werden sollen.<br>
+Das Eingabefeld unterscheidet bei einer seriellen Verbindung drei
+verschiedene Eingabemodi:
+<p>
+<b>1. Cooked Mode</b><br>
+Alle eingegebenen Zeichen werden erst mit Betätigen der RETURN Taste an
+das verbundene Gerät gesendet. Bis zu diesem Zeitpunkt können Sie Ihre
+Eingaben beliebig korrigieren.<br>
+Ob und welches EOS (End of String) Zeichen an die eingegebenen Zeichen
+angehängt wird, bestimmen Sie 
+</p>
+<p>
+<b>2. Cooked Hex Mode</b><br>
+Entspricht dem <i>Cooked Mode</i>, allerdings bekommt hier das Zeichen
+'$' eine Sonderfunktion. Die beiden direkt nach dem '$' Zeichen
+eingegebenen Zeichen werden als hexadezimaler Wert
+interpretiert. Allerdings nur, wenn es sich um die Ziffern 0...9 und
+Buchstaben A...F handelt. Damit können beliebige Steuerzeichen oder
+andere, nicht direkt eingebare Zeichen in den zu sendenden String
+eingefügt werden.<br>
+Beispielsweise führt die Eingabe von: <b>$FFHello World$00</b> zur
+Übertragung von einem Zeichen mit dem Wert 255, gefolgt von dem String
+'Hello World' und einem abschliessenden Nullbyte.<br>
+Um das '$' Zeichen in diesem Modus zu übertragen geben Sie einfach
+<b>$$</b> oder den entsprechenden Wert, d.h. <b>$24</b> ein.
+</p>
+<p>
+<b>3. Raw Mode</b><br>
+Im <i>Raw Mode</i> werden alle Zeichen sofort gesendet.
+</p>
+
+<h3><a name="output">Der Schnittstellen Status</a></h3>
+In diesem Bereich werden alle wichtigen Informationen des aktuell
+verwendeten Interface (RS232 oder GPIB) dargestellt. Zusätzlich bietet
+dieser Bereich auf das jeweilige Interface bezogene Interaktions
+Möglichkeiten wie z.B. die RTS oder DTR Leitung umzuschalten. 
+
+
+
+
+<h2><a name="toolbar">Die Werkzeugleiste</a></h2>
+Die Werkzeugleiste dient zum schnellen Zugriff der am meisten benötigten
+Funktion.
+<br><br>
+<table border=0 cellspacing="0" width=90%>
+<tr bgcolor="#eef6ff">
+<td align="center" width="15%">Symbol</td><td>Beschreibung</td>
+</tr>
+<!-- Quit -->
+<tr>
+<td align="center"><img src="images/quit.gif"></td>
+<td>Beendet wxTerm</td>
+</tr>
+<!-- (Dis)connect -->
+<tr bgcolor="#eef6ff">
+<td align="center"><img src="images/connect.gif"><img
+src="images/disconnect.gif"></td>
+<td>Startet bzw. trennt Verbindung</td>
+</tr>
+</tr>
+<!-- Clear -->
+<tr>
+<td align="center"><img src="images/filenew.gif"></td>
+<td>Löscht Ausgabefenster</td>
+</tr>
+<!-- Open File -->
+<tr bgcolor="#eef6ff">
+<td align="center"><img src="images/fileopen.gif"></td>
+<td>Öffnet eine Datei, deren Inhalt an das verbundene Gerät gesendet
+werden soll</td>
+</tr>
+<!-- Save as... -->
+<tr>
+<td align="center"><img src="images/filesaveas.gif"></td>
+<td>Speichert alle empfangenen Daten in einer Datei</td>
+</tr>
+<!-- Hex -->
+<tr bgcolor="#eef6ff">
+<td align="center"><img src="images/view_hex.gif"></td>
+<td>Stellt alle Ausgaben in hexadezimaler Schreibweise dar</td>
+</tr>
+<!-- Ascii -->
+<tr>
+<td align="center"><img src="images/view_ascii.gif"></td>
+<td>Anzeige aller Ausgaben als normaler Text</td>
+</tr>
+<!-- Scroll -->
+<tr bgcolor="#eef6ff">
+<td align="center"><img src="images/refresh.gif"></td>
+<td>Schaltet das Autoscrolling ein bzw. aus</td>
+</tr>
+<!-- Reset -->
+<tr>
+<td align="center"><img src="images/break.gif"></td>
+<td>Setzt das verbundene Gerät zurück</td>
+</tr>
+<!-- Settings -->
+<tr bgcolor="#eef6ff">
+<td align="center"><img src="images/configure.gif"></td>
+<td>Alle wxTerm relevanten Einstellungen</td>
+</tr>
+</table>
+<br><br>
+
+</body>
+</html>

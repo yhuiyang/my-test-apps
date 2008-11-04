@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<title>wxTerm Manual</title>
+</head>
+
+<body>
+<h1>Einleitung</h1>
+Obwohl wxTerm als Terminalprogramm bezeichnet wird, (es sendet
+Eingaben zu einem verbundenen Gerät und gibt die Antworten aus),
+sollte es nicht mit herkömmlichen Programmen wie HyperTerm oder
+minicom verwechselt werden.<br>
+Der Verwendungszweck für wxTerm liegt vielmehr im Bereich der
+Automatisierungstechnik. Überall dort, wo Geräte (Meß- oder andere
+Laborgeräte) durch einen PC ferngesteuert werden sollen,
+beispielsweise die automatische Durchführung von Meßreihen,
+Frequenzgängen etc.<br>
+<br>
+Gerade beim Zusammenspiel von mehreren Geräten unterschiedlicher
+Hersteller muß oft zunächst die genaue Befehlssequenz und
+Verbindungsparameter ermittelt werden. Teilweise sind die Anleitungen
+der Gerätehersteller bezüglich der Interface Kommandos auch recht kurz
+und ohne Beispiele gehalten, sodaß dem Anwender nichts anderes übrig
+bleibt, als die einzelnen Kommandos auszutesten.<br>
+<br>
+Die Programmierung automatischer Test- und Meßgeräte, die mit
+genormten Schnittsellen (z.B.: GPIB, IEEE 488, RS232 etc.)
+ausgerüstet sind, erfordete in der Vergangenheit noch umfangreiche
+Kenntnisse der verschiedene Programmsprachen. Deshalb haben sich die
+Hersteller von Test- und Meßgeräten 1990 auf eine gemeinsame Sprache
+für dies Steurung dieser Geräte geeinigt. Diese Sprache wurde <a
+name="SCPI">SCPI</a> (Standard Commands for Programmable
+Instruments) genannt.<br>
+SCPI vereinigt die vielfältigen Abfrage- und Befehlssequenzen
+unterschiedlichster Gerätetypen in einer Baumstruktur, was allerdings
+zur Folge hat, daß einzelne Kommandos sehr lang werden
+können. Herkömmliche Terminalprogramme bieten nur rudimentäre
+Möglichkeiten, solche teilweise recht umfangreichen Befehlssequenzen
+zu editieren, korrigieren oder einfach nur zu wiederholen.
+
+<a name="inputmodi"></a>
+<h2>Vielfältige Eingabemöglichkeiten zur Kommandoeditierung</h2>
+Egal ob SCPI oder propitärer Befehlssatz. wxTerm erleichert die
+Kommunikation durch sinnvolle Eingabemodi bei der die Befehlssequenz
+vor dem Senden jederzeit korrigierbar ist und die Eingabe von binären
+Steuerzeichen wie z.B. 'Carridge Return' oder 'Linefeed' an beliebiger
+Stelle erlaubt.<br>
+Die Ausgabe (die vom Gerät stammenden Daten) können als normaler Text
+oder in hexadezimaler Schreibweise dargestellt werden. Bei letzterem
+sind beliebige Zeichen oder Zeichenbereiche einfärbbar z.B. um
+Steuerzeichen besser erkennen zu können.<br>
+Die empfangenen Daten werden gepuffert, sodaß auch ältere Daten
+jederzeit wieder einsehbar sind.
+
+<a name="rs232 and gpib"></a>
+<h2>RS232 und GPIB Verbindungen</h2>
+In der neuen Version erlaubt wxTerm nicht nur die Kommunikation
+mittels RS232 sondern kann (eine PCI GPIB Karte von National
+Instruments vorausgesetzt) auch mit Geräten an einem GPIB Bus
+kommunizieren.<br>
+Dabei ist jede Schnittstelle in weiten Bereichen konfigurierbar.<br>
+Gleichzeitig werden die zur Kommunikation oder Fehlersuche relevanten
+Informationen übersichtlich dargestellt. Sei es die einzelnen
+Leitungspegel bei einer RS232 Verbindung, oder der Status des GPIB
+Kontrollers, des GPIB Busses und des Geräteteilnehmer.<br>
+
+</body>
+</html>

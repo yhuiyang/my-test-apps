@@ -1,0 +1,7 @@
+[OPTIONS]
+Compatibility=1.1
+Contents file=wxterm_en.hhc
+Index file=wxterm_en.hhk
+Display compile progress=No
+Title=wxTerm RS232 and GPIB Terminal
+Default topic=intro_en.html

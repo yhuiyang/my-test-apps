@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<title>Häufig gestellte Fragen</title>
+</head>
+<body>
+
+<h1>Häufig gestellte Fragen</h1>
+
+<a name="Device Clear"></a>
+<h2>Was macht eigentlich der Reset Knopf?</h2>
+Die Aktion des Reset Knopf ist abhängig von der verwendeten
+Schnittstelle. Bei einer RS232 Verbindung wird ein 0.25s langes Break
+gesendet. Handelt es sich um eine GPIB Verbindung, sendet das Programm
+ein Device Clear Kommando an das verbundene Gerät (entsprechend der
+angegebenen GPIB Adresse).<br>
+In beiden Fällen sollte dies das Gerät in einen definierten Zustand
+zurückversetzen.
+
+<a name="Admin Rechte"></a>
+<h2>Benötige ich Administratorrechte?</h2>
+Sowohl unter Linux als auch Windows können Sie das Programm als
+normaler User installieren und starten. Allerdings benötigt das
+Programm Zugriff auf die entsprechenden Schnittstellen. Unter Windows
+sollte dies kein Problem sein (es sei denn, dem normalen
+Systemanwender wurde der Zugriff auf diese explizit verboten).<br>
+Unter Linux sollte der User die Gruppe tty besitzen. Ggf. muß auch der
+Zugriff auf die GPIB Device Einträge freigegeben werden. 
+
+<a name="Linux Version"></a>
+<h2>Gibt es wxTerm auch als Linux Version?</h2>
+Selbstverständlich! Die aktuellen Versionen (Windows und Linux) finden
+Sie unter: <font color=#0000ff>http://www.iftools.com</font>
+auf der Extras Seite.
+ 
+</body>
+</html>

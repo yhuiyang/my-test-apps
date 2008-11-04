@@ -1,0 +1,7 @@
+[OPTIONS]
+Compatibility=1.1
+Contents file=wxterm_de.hhc
+Index file=wxterm_de.hhk
+Display compile progress=No
+Title=wxTerm Manual
+Default topic=intro_de.html

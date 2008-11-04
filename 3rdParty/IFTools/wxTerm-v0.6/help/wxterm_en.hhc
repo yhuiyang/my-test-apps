@@ -1,0 +1,37 @@
+<html>
+<head>
+<!-- Sitemap 1.0 -->
+</head>
+<body>
+<object type="text/site properties">
+<param name="ImageType" value="Folder">
+</object>
+<ul>
+ <!-- Kapitel Einleitung -->
+ <li><object type="text/sitemap">
+ <param name="Name" value="Introduction">
+ <param name="Local" value="intro_en.html">
+ </object>
+ <ul>
+  <li><object type="text/sitemap">
+  <param name="Name" value="Manifold commandline editing modes">
+  <param name="Local" value="intro_en.html#inputmodi">
+  </object>
+  <li><object type="text/sitemap">
+  <param name="Name" value="RS232 and GPIB connections">
+  <param name="Local" value="intro_en.html#rs232 and gpib">
+  </object>
+ </ul>   
+ <!-- Bedienung -->
+ <li><object type="text/sitemap">
+ <param name="Name" value="Program handling">
+ <param name="Local" value="operation_en.html">
+ </object>
+ <!-- FAQ -->
+ <li><object type="text/sitemap">
+ <param name="Name" value="Frequently asked questions">
+ <param name="Local" value="faq_en.html">
+ </object>
+</ul>
+</body>
+</html>

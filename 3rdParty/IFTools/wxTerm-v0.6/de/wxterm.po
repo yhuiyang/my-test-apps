@@ -1,0 +1,473 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: wxTerm 0.5.0\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2006-01-18 22:48+0100\n"
+"Last-Translator: Joachim Buermann <jbuermann@iftools.com>\n"
+"Language-Team: Joachim Buermann <jbuermann@iftools.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: GERMANY\n"
+"X-Poedit-SourceCharset: iso-8859-1\n"
+"X-Poedit-Basepath: /home/jo/project/wxterm/\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: menu.cpp:15
+msgid "&Open COM"
+msgstr "Ö&ffne COM"
+
+#: menu.cpp:16
+msgid "&Close COM"
+msgstr "S&chließe COM"
+
+#: menu.cpp:17
+msgid "E&xit\tCtrl-X"
+msgstr "&Ende\tCtrl-X"
+
+#: menu.cpp:20
+msgid "&Clear Output\tCtrl-C"
+msgstr "&Lösche Ausgabe\tCtrl-C"
+
+#: menu.cpp:21
+msgid "&Scroll Output\tCtrl-Shift-S"
+msgstr "&Scrolle Ausgabe\tCtrl-Shift-S"
+
+#: menu.cpp:23
+#, fuzzy
+msgid "&Ascii Output\tCtrl-T"
+msgstr "&Ascii Darstellung\tCtrl-A"
+
+#: menu.cpp:24
+msgid "&Hex Output\tCtrl-H"
+msgstr "&Hex Darstellung\tCtrl-H"
+
+#: menu.cpp:27
+msgid "&Preverence"
+msgstr "&Voreinstellungen"
+
+#: menu.cpp:30
+msgid "Send &Break\tCtrl-B"
+msgstr "Sende &Break\tCtrl-B"
+
+#: menu.cpp:31
+msgid "Toggle &DTR\tCtrl-D"
+msgstr "&DTR Umschalten\tCtrl-D"
+
+#: menu.cpp:32
+msgid "Toggle &RTS\tCtrl-R"
+msgstr "&RTS Umschalten\tCtrl-R"
+
+#: menu.cpp:33
+msgid "Show toolbar text"
+msgstr "Werkzeugleiste mit Text"
+
+#: menu.cpp:38
+msgid "wxTerm &Help\tF1"
+msgstr "wxTerm &Hilfe\tF1"
+
+#: menu.cpp:39
+msgid "&About...\tCtrl-A"
+msgstr "Ü&ber...\tCtrl-A"
+
+#: menu.cpp:43
+msgid "&File"
+msgstr "&Datei"
+
+#: menu.cpp:44
+msgid "&View"
+msgstr "&Anzeige"
+
+#: menu.cpp:45
+msgid "&Options"
+msgstr "&Optionen"
+
+#: menu.cpp:46
+msgid "&Extras"
+msgstr "&Extras"
+
+#: menu.cpp:47
+msgid "&Help"
+msgstr "&Hilfe"
+
+#: connection_wdr.cpp:30
+msgid "Serial Port"
+msgstr "Serieller Port"
+
+#: connection_wdr.cpp:37
+msgid "Baudrate"
+msgstr "Baudrate"
+
+#: connection_wdr.cpp:56
+msgid "Wordlen"
+msgstr "Wortlänge"
+
+#: connection_wdr.cpp:69
+msgid "Parity"
+msgstr "Parität"
+
+#: connection_wdr.cpp:81
+msgid "Stopbits"
+msgstr "Stoppbits"
+
+#: connection_wdr.cpp:92
+msgid "RTS/CTS"
+msgstr "RTS/CTS"
+
+#: connection_wdr.cpp:98
+msgid "Xon/Xoff"
+msgstr "Xon/Xoff"
+
+#: color_wdr.cpp:30
+msgid "Rule"
+msgstr "Regel"
+
+#: color_wdr.cpp:37
+msgid "From first"
+msgstr "Von"
+
+#: color_wdr.cpp:44
+msgid "To last"
+msgstr "bis"
+
+#: color_wdr.cpp:51
+msgid "with color"
+msgstr "mit Farbe"
+
+#: color_wdr.cpp:58
+msgid "1"
+msgstr "1"
+
+#: color_wdr.cpp:69
+#: color_wdr.cpp:92
+#: color_wdr.cpp:115
+#: color_wdr.cpp:138
+#: color_wdr.cpp:159
+msgid "Red"
+msgstr "Rot"
+
+#: color_wdr.cpp:70
+#: color_wdr.cpp:93
+#: color_wdr.cpp:116
+#: color_wdr.cpp:139
+#: color_wdr.cpp:160
+msgid "Orange"
+msgstr "Orange"
+
+#: color_wdr.cpp:71
+#: color_wdr.cpp:94
+#: color_wdr.cpp:117
+#: color_wdr.cpp:140
+#: color_wdr.cpp:161
+msgid "Yellow"
+msgstr "Gelb"
+
+#: color_wdr.cpp:72
+#: color_wdr.cpp:95
+#: color_wdr.cpp:118
+#: color_wdr.cpp:141
+#: color_wdr.cpp:162
+msgid "Green"
+msgstr "Grün"
+
+#: color_wdr.cpp:73
+#: color_wdr.cpp:96
+#: color_wdr.cpp:119
+#: color_wdr.cpp:142
+#: color_wdr.cpp:163
+msgid "Blue"
+msgstr "Blau"
+
+#: color_wdr.cpp:74
+#: color_wdr.cpp:97
+#: color_wdr.cpp:120
+#: color_wdr.cpp:143
+#: color_wdr.cpp:164
+msgid "Violet"
+msgstr "Violett"
+
+#: color_wdr.cpp:75
+#: color_wdr.cpp:98
+#: color_wdr.cpp:121
+#: color_wdr.cpp:144
+#: color_wdr.cpp:165
+msgid "Grey"
+msgstr "Grau"
+
+#: color_wdr.cpp:76
+#: color_wdr.cpp:99
+#: color_wdr.cpp:122
+#: color_wdr.cpp:145
+#: color_wdr.cpp:166
+msgid "Black"
+msgstr "Schwarz"
+
+#: color_wdr.cpp:81
+msgid "2"
+msgstr "2"
+
+#: color_wdr.cpp:104
+msgid "3"
+msgstr "3"
+
+#: color_wdr.cpp:127
+msgid "4"
+msgstr "4"
+
+#: color_wdr.cpp:150
+msgid "Rest"
+msgstr "Rest"
+
+#: modgpib.cpp:96
+msgid "GPIB Status"
+msgstr "GPIB Status"
+
+#: modgpib.cpp:115
+msgid "Device Status"
+msgstr "Gerätestatus"
+
+#: modgpib.cpp:131
+msgid "Line Status"
+msgstr "Leitungsstatus"
+
+#: modgpib.cpp:147
+msgid "Error"
+msgstr "Fehler"
+
+#: modgpib.cpp:150
+msgid "No."
+msgstr "Nr."
+
+#: modgpib.cpp:158
+msgid "ID."
+msgstr "ID."
+
+#: modgpib.cpp:171
+msgid "Query"
+msgstr "Abfrage"
+
+#: modgpib.cpp:174
+msgid "Read"
+msgstr "Lesen"
+
+#: modgpib.cpp:178
+msgid "Auto read"
+msgstr "Autom. Lesen"
+
+#: portsel.cpp:37
+msgid "Please wait"
+msgstr "Bitte warten"
+
+#: portsel.cpp:38
+msgid "Search for new serial ports..."
+msgstr "Suche nach verfügbaren seriellen Ports..."
+
+#: modserial.cpp:51
+msgid "Status"
+msgstr "Status"
+
+#: modserial.cpp:54
+msgid "Input"
+msgstr "Eingabe"
+
+#: modserial.cpp:62
+msgid "Toggle RTS linestate (Ctrl-r)"
+msgstr "RTS Umschalten (Strg-r)"
+
+#: modserial.cpp:66
+msgid "Toggle DTR linestate (Ctrl-d)"
+msgstr "DTR Umschalten (Strg-d)"
+
+#: modserial.cpp:85
+msgid "EOS is"
+msgstr "EOS ist"
+
+#: modserial.cpp:91
+msgid "The EOS (end of string) follows every line, you send in cooked mode. And it force a linebreak in the output window."
+msgstr "Das EOS (End Of String oder Zeilenende Zeichen) wird an jede Zeile angefuegt, die im cooked Nodus gesendet wird. "
+
+#: modserial.cpp:98
+msgid "Input is"
+msgstr "Eingabe ist"
+
+#: modserial.cpp:104
+msgid "In cooked mode, the inputed chars of a line will be send after pressing Return. In raw mode, all chars will be send immediatelly"
+msgstr "Im cooked Modus werden alle eingebenen Zeichen erst mit Druecken der Enter Taste gesendet. Im raw Modus erfolgt die Sendung jedes Zeichens sofort."
+
+#: statbar.cpp:25
+#: statbar.cpp:40
+msgid "Start Log"
+msgstr "Starte Aufzeichnung"
+
+#: statbar.cpp:39
+msgid "Stop Log"
+msgstr "Stoppe Aufzeichnung"
+
+#: prefs.cpp:293
+msgid "Settings Dialog"
+msgstr "Einstellungsdialog"
+
+#: prefs.cpp:295
+msgid "RS232 Settings"
+msgstr "RS232 Parameter"
+
+#: prefs.cpp:298
+msgid "RS232 Connection Settings"
+msgstr "RS232 Verbindungs Parameter "
+
+#: prefs.cpp:302
+msgid "GPIB Settings"
+msgstr "GPIB Parameter"
+
+#: prefs.cpp:305
+msgid "GPIB Connection settings"
+msgstr "GPIB Verbindungs Parameter"
+
+#: prefs.cpp:309
+msgid "Logging"
+msgstr "Protokollieren"
+
+#: prefs.cpp:312
+msgid "Data logging settings"
+msgstr "Protokoll Datei"
+
+#: prefs.cpp:315
+msgid "Colors"
+msgstr "Farben"
+
+#: prefs.cpp:318
+msgid "Hexchar color settings"
+msgstr "Farbeinstellungen der Hex Zeichen"
+
+#: prefs.cpp:321
+msgid "Connection"
+msgstr "Verbindung"
+
+#: logging_wdr.cpp:28
+msgid "Default destination file for saving received data"
+msgstr "Voreingestellte Protokoll Datei"
+
+#: logging_wdr.cpp:33
+msgid "Data logfile"
+msgstr "Log Datei"
+
+#: logging_wdr.cpp:39
+msgid "Browse"
+msgstr "Durchsuchen"
+
+#: main.cpp:337
+#: main.cpp:432
+msgid "Disconnected"
+msgstr "Getrennt"
+
+#: main.cpp:422
+msgid "Connected"
+msgstr "Verbunden"
+
+#: gpib_wdr.cpp:30
+msgid "Address"
+msgstr "Adresse"
+
+#: gpib_wdr.cpp:36
+msgid "Timeout"
+msgstr "Timeout"
+
+#: gpib_wdr.cpp:65
+msgid "EOS Settings"
+msgstr "EOS Einstellungen"
+
+#: gpib_wdr.cpp:70
+msgid "Send EOI at end of Write"
+msgstr "Sende EOI nach Schreiben"
+
+#: gpib_wdr.cpp:76
+msgid "Terminate Read on EOS"
+msgstr "EOS beendet Lesen"
+
+#: gpib_wdr.cpp:82
+msgid "Set EOI with EOS on Write"
+msgstr "Setze EOI bei EOS (Schreiben)"
+
+#: gpib_wdr.cpp:88
+msgid "8-bit EOS Compare"
+msgstr "8-bit EOS Vergleich"
+
+#: gpib_wdr.cpp:94
+msgid "EOS Byte decimal)"
+msgstr "EOS Byte dezimal"
+
+#: toolbar.cpp:31
+#: toolbar.cpp:32
+msgid "Quit"
+msgstr "Ende"
+
+#: toolbar.cpp:43
+msgid "(Dis)Connect"
+msgstr "Trennen/Verbinden"
+
+#: toolbar.cpp:54
+msgid "Clear output window (Ctrl-c)"
+msgstr "Loesche Ausgabe\tCtrl-C"
+
+#: toolbar.cpp:55
+msgid "Clear"
+msgstr "Loeschen"
+
+#: toolbar.cpp:64
+msgid "Open file to send (Ctrl-o)"
+msgstr "Oeffne Datei zum Senden (Strg-o)"
+
+#: toolbar.cpp:65
+msgid "Open"
+msgstr "Öffnen"
+
+#: toolbar.cpp:74
+msgid "Save received data as..."
+msgstr "Speichere empfangene Daten unter..."
+
+#: toolbar.cpp:75
+msgid "Save as"
+msgstr "Speichern unter"
+
+#: toolbar.cpp:90
+msgid "Show data as hex (Ctrl-h)"
+msgstr "Ausgabe in hexadezimaler Darstellung (Strg-h)"
+
+#: toolbar.cpp:91
+msgid "Hex"
+msgstr "Hex"
+
+#: toolbar.cpp:102
+#, fuzzy
+msgid "Show data as normal text (Ctrl-t)"
+msgstr "Ausgabe als normaler Text (Strg-a)"
+
+#: toolbar.cpp:103
+msgid "Ascii"
+msgstr "Ascii"
+
+#: toolbar.cpp:112
+msgid "Switch on/off autoscrolling"
+msgstr "Ein/Ausschalten des automatischen Scrollens"
+
+#: toolbar.cpp:113
+msgid "Scroll"
+msgstr "Scrollen"
+
+#: toolbar.cpp:124
+msgid "Reset device"
+msgstr "Geraet zuruecksetzen"
+
+#: toolbar.cpp:125
+msgid "Reset"
+msgstr "Reset"
+
+#: toolbar.cpp:134
+msgid "Preferences"
+msgstr "Voreinstellungen"
+
+#: toolbar.cpp:135
+msgid "Settings"
+msgstr "Einstellungen"
+

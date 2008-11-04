@@ -1,0 +1,17 @@
+for l in en de; do 
+    echo "language: $l"
+    htmldoc \
+    --fontsize 10.0 \
+    --fontspacing 1.25 \
+    --bodyfont Arial \
+    --book --duplex \
+    --color \
+    --linkcolor \#0000ff \
+    --linkstyle plain \
+    --numbered \
+    --size A4 \
+    --title \
+    -f wxterm_$l.pdf \
+    intro_$l.html \
+    faq_$l.html;
+done

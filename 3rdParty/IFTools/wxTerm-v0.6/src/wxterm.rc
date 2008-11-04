@@ -1,0 +1,2 @@
+aaaaaa ICON "wxterm.ico"
+#include "wx/msw/wx.rc"

@@ -1,0 +1,10 @@
+README
+======
+
+Release
+-------
+make -B GPIB=1 DEBUG=0 WX_DEBUG='--debug=no' WX_LIBS="`wx-config --libs std,stc,awx --debug=no`"
+
+Debug
+-----
+make -B GPIB=1 DEBUG=1 WX_DEBUG='--debug=yes' "WX_LIBS=`wx-config --libs std,stc,awx --debug=yes`" 
